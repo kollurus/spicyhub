@@ -1,0 +1,53 @@
+
+.no-margin-padding{
+	margin: 0px;
+	padding: 0px;
+}
+.custom-fluid-container{
+	margin: 0px;
+	padding: 0px;
+}
+.color-white{
+	color: white;
+}
+.image-strech{
+	width: 100%;
+}
+a.ex:hover{
+	color: white;
+	font-size: 150%;
+}
+div.ex1{
+    width:300px;
+    margin: auto;
+}
+.custom-color{
+	opacity:0.8;
+	background-color:#000000;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    background: none;
+    outline: none
+}
+.footer-style{
+	margin:0px;
+	margin-right:0px;
+	padding-top:20px;
+	opacity:0.8;
+	background-color:black;
+	color:#808080;
+	box-sizing: border-box;
+}
+.affix{
+	width:100%;
+}
+h3.ex3{
+	color:#a6a6a6;
+}
+.footer-rights{
+	padding:10px;
+	margin-right:0px;
+	background-color: #666666;
+	color:#000000;
+}

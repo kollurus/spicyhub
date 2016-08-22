@@ -1,0 +1,37 @@
+<%
+%><%@include file="/libs/foundation/global.jsp"%><%
+%><%@page session="false" %><%
+%><%
+
+<style type="text/css">
+.line {
+width:70%;
+}
+.line:after {
+content:'';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: 8px;
+left: 45%;
+}
+.line:before {
+content:'';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 0;
+border-color: #7F7F7F transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: 9px;
+left: 45%;
+}
+</style>
+<%@include file="/apps//global.jsp"%>
+<hr class="line">
+%>

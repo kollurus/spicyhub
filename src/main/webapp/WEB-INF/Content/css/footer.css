@@ -1,0 +1,97 @@
+Bootsnipp
+About
+Tools 
+Snippets 
+Register
+Login
+
+"footer"
+Bootstrap 3.3.0 Snippet by safwen
+3.3.0 footer
+
+ 
+PreviewHTMLCSS    Fork this  93   0 Fav  
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+/************************************************************
+*************************Footer******************************
+*************************************************************/
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(http://fonts.googleapis.com/css?family=Gudea);
+.footer1 {
+    background: #FFDEAD url("../images/footer/footer-bg.png") repeat scroll left top;
+    padding-top: 40px;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;/*  border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: #003;*/
+}
+.title-widget {
+    color: #898989;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 25px;
+Similar snippets: See More
+357  0 
+footer 2
+
+
+60  0 
+footer 2
+
+
+138  0 
+footer 2
+
+
+399  0 
+footer 2
+
+
+ 
+Competitive SEO Data
+Get competitive SEO intelligence, backlinks, rankings, keyword research, with SEMrush.
+Comments:
+
+ 
+ 
+ Follow @bootsnipp  Tweet
+Bootsnipp.com © 2015 Dan's Tools | Site Privacy policy | Advertise | Featured snippets are MIT license.
