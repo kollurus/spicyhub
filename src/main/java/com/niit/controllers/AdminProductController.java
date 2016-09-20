@@ -51,7 +51,8 @@ public class AdminProductController {
 		productDAO.saveOrUpdate(product);
 		MultipartFile file=product.getImage();
 		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\resources\\images\\product\\"+product.getId()+".jpg");
+        path = Paths.get(rootDirectory + "\\resources\\images\\supplier\\"+product.getId()+".jpg");
+       
         if (file != null && !file.isEmpty()) {
             try {
             	System.out.println("Image Saving Start");
@@ -59,14 +60,15 @@ public class AdminProductController {
             	System.out.println("Image Saved");
             } catch (Exception e) {
                 e.printStackTrace();
-                throw new RuntimeException("item image saving failed.", e);
+                System.out.println("Error");
+                
             }
         }
 		return "redirect:/product";
 	}
 
 	@RequestMapping("editproduct/{id}")
-	public String editProduct(@PathVariable("id") String id, Model model) {
+	public String editProduct(@PathVariable("id") int id, Model model) {
 		System.out.println("editProduct");
 		model.addAttribute("product", this.productDAO.get(id));
 		model.addAttribute("productList", productDAO.list());
@@ -77,7 +79,7 @@ public class AdminProductController {
 	}
 
 	@RequestMapping(value = { "removeproduct/{id}", "editproduct/removeproduct/{id}" })
-	public String removeproduct(@PathVariable("id") String id, Model model,HttpServletRequest request) throws Exception {
+	public String removeproduct(@PathVariable("id") int id, Model model,HttpServletRequest request) throws Exception {
 		String path=request.getSession().getServletContext().getRealPath("/")+"\\resources\\images\\product\\";
 		MultiPartController.deleteimage(path, id+".jpg");
 		productDAO.delete(id);

@@ -108,15 +108,15 @@ div.center {
 					<ul class="nav navbar-nav navbar-right">
 						<c:choose>
 							<c:when test="${!Administrator}">
-								<li class="active"><a href="viewcart" class="w3-hover-none"><span
+								<li class=""><a href="viewcart" class="w3-hover-none"><span
 										class="glyphicon glyphicon-shopping-cart">(${cartsize})</span></a></li>
 							</c:when>
 						</c:choose>
 
-						<li class="active"><a href="#" class="w3-hover-none"><span
+						<li class=""><a href="#" class="w3-hover-none"><span
 								class="glyphicon glyphicon-user"></span> Hi, ${name}</a></li>
 
-						<li class="active"><a href="perform_logout"
+						<li class=""><a href="perform_logout"
 							class="w3-hover-none"><span
 								class="glyphicon glyphicon-log-out"></span></a></li>
 
@@ -128,7 +128,7 @@ div.center {
 					<div class="collapse navbar-collapse" style="color: red">
 						<ul class="nav navbar-nav navbar-right">
 
-							<li class="active"><a href="Register"> <span
+							<li class="active"><a href="registration"> <span
 									class="glyphicon glyphicon-log-in"></span> Register
 							</a></li>
 							<li class="active"><a href="login"> <span
@@ -194,12 +194,18 @@ div.center {
 			<c:import url="/WEB-INF/views/cart.jsp">
 			</c:import>
 		</c:when>
+		<c:when test="${IndividualItemClicked}">
+			<c:import url="/WEB-INF/views/IndividualItem.jsp">
+			</c:import>
+		</c:when>
+		
 
 		<c:when test="${IfPaymentClicked}">
 			<c:import url="/WEB-INF/views/payment.jsp">
 			</c:import>
 		</c:when>
 	</c:choose>
+	
 
 
 	<!-- Category List End -->
@@ -214,7 +220,12 @@ div.center {
 			</c:import>
 		</c:when>
 	</c:choose>
-
+<c:choose>
+		<c:when test="${ViewCategoryClicked}">
+			<c:import url="/WEB-INF/views/viewitem.jsp">
+			</c:import>
+		</c:when>
+	</c:choose>
 	<c:choose>
 		<c:when test="${ProductPageClicked}">
 			<c:import url="/WEB-INF/views/addproduct.jsp"></c:import>
@@ -264,7 +275,7 @@ div.center {
 							<div class="carousel-inner" role="listbox">
 								<div class="item active">
 									<img
-										src="C:\Users\Sneha\Downloads\636020301417375882-goldbely-epic-food-subscription-700X400 (1).jpg"
+										src="C:\Users\Sneha\Downloads\636020301417375882-goldbely-epic-food-subscription-700X400.jpg"
 										alt="Chania" width="800" height="800">
 								</div>
 

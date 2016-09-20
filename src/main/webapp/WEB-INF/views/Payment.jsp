@@ -10,10 +10,13 @@
 <title>Payment</title>
 <link href="<c:url value="/WEB-INF/content/css/credit.css" />" rel="stylesheet">
 </head>
+<script>
+
+</script>
 <body  style="padding-top: 75px">
 <div id="card">
 <section class="credit-card visa gr-visa">
-        <div class="logo">Visa</div>
+        <div class="logo">P A Y M E N T</div>
         <form action="pay" method="post">
             <h2>Payment Details</h2>
 
@@ -21,7 +24,7 @@
                 <li>
                     <label>Card Number</label>
                     <input type="text" name="card_number" pattern="[0-9]{13,16}"placeholder="xxxx xxxx xxxx xxxx" class="full gr-input" required />
-                </li>
+                </li><br>
                 <li class="expire last">
                     <label>Expiration</label>
                     <input type="text" name="expire_month" placeholder="(month)-(date)" size="10" class="month gr-input" required />
@@ -32,7 +35,7 @@
                     <label>CVC Code</label>
                     <input type="text" name="cvc_code" placeholder="xxx" size="3" class="gr-input" required />
                 </li>
-                <li><button type="submit" class="btn btn-xs btn-primary">Pay</button></li>
+                <button type="submit" class="btn btn-xs btn-primary">Pay</button>
          
             </ul>
         </form>

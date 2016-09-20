@@ -44,25 +44,44 @@ th {
 		<h1>PRODUCT MODULE</h1>
 		
 		
-	<li class="active" ><a href="perform_logout"
-							class="w3-hover-none"><span class="glyphicon glyphicon-log-out"></span></a></li>
+	
 		<form:form action="${addAction}" commandName="product" enctype="multipart/form-data" method="post">
 
 			<table border="1" cellpadding="10" cellspacing="10" align="center">
 			<thead>
-					<tr>
-						<td><form:label path="id">
+					 <tr>
+						<%-- <td><form:label path="id">
+								<spring:message text="Id" />
+							</form:label></td> 
+						<c:choose>
+							   <c:when test="${!empty product.id}">
+								 <td><form:input path="id" enable="true" readonly="true" /></td> 
+						</c:when> 
+                         <c:otherwise>
+							<td><form:input path="id" pattern="{3,10}" required="true"
+									title="id should contains 3 to 10 characters" /></td>
+						</c:otherwise>
+							
+						</c:choose> --%>
+
+<%--                                   <td><form:label path="id">
+									<spring:message text="Id" />
+								</form:label></td>
+							<c:choose>
+								<c:when test="${!empty product.id}">
+							    <td><form:input path="id" enable="true" readonly="true" />
+									</td>
+								</c:when>
+
+								<c:otherwise>
+									<td><form:input path="id" required="true" /></td>
+								</c:otherwise>
+							</c:choose> --%>
+							<td><form:label path="Id">
 								<spring:message text="Id" />
 							</form:label></td>
-						<c:choose>
-							<c:when test="${!empty product.id}">
-								<td><form:input path="id" readonly="true" /></td>
-							</c:when>
+						<td><form:input path="Id" required="true" /></td>
 
-							<c:otherwise>
-								<td><form:input path="id" /></td>
-							</c:otherwise>
-						</c:choose>
 					<tr>
 						<td><form:label path="name">
 								<spring:message text="Name" />
@@ -81,7 +100,7 @@ th {
 							</form:label></td>
 						<td><form:input path="price" required="true" /></td>
 					</tr>
-					<tr>
+					<%-- <tr>
 						<td><form:label path="supplierid">
 								<spring:message text="Supplier" />
 							</form:label></td>
@@ -100,13 +119,35 @@ th {
 									<form:option value="${category.id}">${category.name}</form:option>
 								</c:forEach>
 							</form:select></td>
-					</tr>
+					</tr> --%>
+					
+					<tr>
+							<td><form:label path="supplierid">
+									<spring:message text="Supplier" />
+								</form:label></td>
+							<td><form:select path="supplierid" required="true">
+						 	<c:forEach items="${supplierList}" var="supplier">
+								<form:option value="${supplier.id}">${supplier.name}</form:option>
+							</c:forEach>
+								</form:select></td>
+						</tr>
+						
+						<tr>
+							<td><form:label path="categoryid">
+									<spring:message text="categoryid" />
+								</form:label></td>
+							<td><form:select path="categoryid" required="true">
+						 	<c:forEach items="${categoryList}" var="categoryid">
+								<form:option value="${categoryid.id}">${categoryid.name}</form:option>
+							</c:forEach>
+								</form:select></td>
+						</tr> 
 					<tr>
 						<td><form:label path="image">
 								<spring:message text="Image" />
 							</form:label></td>
 						<td><form:input type="file" path="image" required="true" /></td>
-					</tr>
+					</tr> 
 					<tr>
 						<td colspan="2"><c:if test="${!empty product.name}">
 								<input type="submit" class="w3-btn w3-blue"

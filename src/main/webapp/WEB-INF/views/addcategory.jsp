@@ -38,8 +38,8 @@ th {
 <body><h1>CATEGORY MODULE</h1>
 
 
-			<li class="active" ><a href="perform_logout"
-			class="w3-hover-none"><span class="glyphicon glyphicon-log-out">Sign Out</span></a></li>
+			<!--  <li class="active" ><a href="perform_logout"
+			class="w3-hover-none"><span class="glyphicon glyphicon-log-out">Sign Out</span></a></li> -->
 <c:url var="addAction" value="addcategory"></c:url>
 
 	<form:form action="${addAction}" commandName="category">
@@ -50,8 +50,8 @@ th {
 					</form:label></td>
 				<c:choose>
 					<c:when test="${!empty category.id}">
-						<td><form:input path="id" disabled="true" readonly="true" />
-						</td>
+					<!--  	<td><form:input path="id" disabled="true" readonly="true" />
+						</td>-->
 					</c:when>
 
 					<c:otherwise>

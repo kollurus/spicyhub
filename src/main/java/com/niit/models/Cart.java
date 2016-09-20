@@ -17,12 +17,12 @@ public class Cart {
 	@GeneratedValue
 	private int id;
 	
-	private String productid;
+	private int productid;
 	
-	public String getProductid() {
+	public int getProductid() {
 		return productid;
 	}
-	public void setProductid(String productid) {
+	public void setProductid(int productid) {
 		this.productid = productid;
 	}
 	public int getId() {

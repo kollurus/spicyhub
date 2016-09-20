@@ -39,8 +39,7 @@ th {
 <body>
 	<h1>SUPPLIER MODULE</h1>
 	
-						<li class="active" ><a href="perform_logout"
-							class="w3-hover-none"><span class="glyphicon glyphicon-log-out"></span></a></li>
+						
 	<c:url var="addAction" value="addsupplier"></c:url>
 
 	<form:form action="${addAction}" commandName="supplier"

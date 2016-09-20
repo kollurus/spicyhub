@@ -44,7 +44,7 @@ public class LoginController {
 		return "welcome";
 	}
 
-	@RequestMapping(value = "Register")
+	@RequestMapping(value = "registration")
 	public String DisplayRegister(Model mv) {
 		mv.addAttribute("userDetails", new UserDetails());
 	mv.addAttribute("categoryList", categoryDAO.list());
